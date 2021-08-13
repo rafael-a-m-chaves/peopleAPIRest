@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Person {
     private String lastname;
 
     @Column(nullable = false, unique = true)
+    @CPF
     private String cpf;
 
     @Column
